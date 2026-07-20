@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Draft Invoice Approval Request</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; color: #333333; line-height: 1.6;">
+
+<p>Dear anh/chị <strong style="color: #4A708B;">@{{ PM }}</strong>,</p>
+
+<p>
+Could you please review and approve for the draft invoice which got Acceptance in {{ Month_Year }} before we issue official as below:
+</p>
+
+<table cellpadding="0" cellspacing="0" border="1" style="border-collapse: collapse; width: 100%; max-width: 1200px;">
+    <thead>
+        <tr style="background-color: #008000; color: #ffffff; text-align: center;">
+            <th style="padding: 10px;">Oracle Code</th>
+            <th style="padding: 10px;">Project #</th>
+            <th style="padding: 10px;">Project Name</th>
+            <th style="padding: 10px;">Client Code</th>
+            <th style="padding: 10px;">Invoice Date</th>
+            <th style="padding: 10px;">Amount for Labor Cost (JPY)</th>
+            <th style="padding: 10px;">Tax (JPY)</th>
+            <th style="padding: 10px;">Total (JPY)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; text-align: center;">{{ Oracle_Project }}</td>
+            <td style="padding: 10px; text-align: center;">{{ Project_code_Original }}</td>
+            <td style="padding: 10px;">{{ Project_Name }}</td>
+            <td style="padding: 10px; text-align: center;">{{ Client_Code }}</td>
+            <td style="padding: 10px; text-align: center;">{{ Invoice_Date }}</td>
+            <td style="padding: 10px; text-align: right;">{{ Amount_for_labor_cost }}</td>
+            <td style="padding: 10px; text-align: right;">{{ Tax }}</td>
+            <td style="padding: 10px; text-align: right;">{{ Total_Invoice_Amount }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p style="margin-top: 20px;">
+    <strong>Attachments:</strong><br>
+    {% for fname in Attachment_Names %}
+        &#10003; {{ fname }}<br>
+    {% endfor %}
+</p>
+
+<p>
+Thank you.<br>
+<em>Thanks and best regards,</em>
+</p>
+
+</body>
+</html>
