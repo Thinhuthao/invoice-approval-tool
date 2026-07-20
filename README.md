@@ -46,7 +46,7 @@ Sau khi đã cài đặt xong ở Bước 3, mỗi lần muốn mở phần mề
 Vào thư mục phần mềm, gõ cmd lên thanh địa chỉ trên cùng để mở cửa sổ đen.
 
 Gõ (hoặc dán) dòng lệnh sau rồi nhấn Enter:
-   ```cmd
-   venv\Scripts\activate && python main.py
 
+DOS
+venv\Scripts\activate && python main.py
 Giao diện phần mềm sẽ hiện lên. Bạn chỉ cần chọn file Excel, thư mục đính kèm và bấm nút chạy!
